@@ -249,7 +249,7 @@ func NewMultiLineString(coordinates MultiLine) *MultiLineString {
 // }
 type Polygon struct {
 	Type        string    `json:"type" bson:"type"`
-	Coordinates MultiLine `json:"coordinates,float" bson:"coordinates,float"`
+	Coordinates MultiLine `json:"coordinates,omitempty" bson:"coordinates,omitempty"`
 	Crs         *CRS      `json:"crs,omitempty" bson:"crs,omitempty"`
 }
 
